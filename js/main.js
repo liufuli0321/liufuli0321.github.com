@@ -1,13 +1,13 @@
 var hasPushstate = !!(window.history && history.pushState);
 // duoshuo load function
 var duoshuoName = '4871965'; // change to your DUOSHUO name
-var duoshuoQuery = {short_name: duoshuoName}; // change to your duoshuo name
+var duoshuoQuery = {short_name: 4871965}; // change to your duoshuo name
 function toggleDuoshuoComments(container) {
     var el = document.createElement('div');
     el.setAttribute('data-thread-key', postTitle);
     el.setAttribute('data-url', postHref);
     el.setAttribute('data-title', postTitle);
-    el.setAttribute('data-author-key', duoshuoName); // change to your duoshuo name
+    el.setAttribute('data-author-key', 4871965); // change to your duoshuo name
     DUOSHUO.EmbedThread(el);
     jQuery(container).append(el);
 }
