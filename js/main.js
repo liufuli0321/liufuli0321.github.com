@@ -220,14 +220,18 @@ function afterPjax() {
 
     $('.share-button').popover({
         placement: 'bottom',
-        content: '<div class="bdsharebuttonbox">
-					<a href="#" class="bds_more" data-cmd="more"></a>
-					<a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
-					<a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
-					<a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
-					<a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
-					<a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a></div>
-					<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>',
+        content: '<a target="_blank" href="http://service.weibo.com/share/share.php?url=' +
+            postHref + "&title=" + postTitle +
+            '"><i  class=" fa share-icon fa-weibo fa-2x"></i></a>' +
+            '<a target="_blank" href="http://twitter.com/share?url=' +
+            postHref +
+            '"><i class="fa share-icon fa-twitter fa-2x"></i></a>' +
+            '<a target="_blank" href="https://plus.google.com/share?url=' +
+            postHref + "&title=" + postTitle +
+            '"><i class="fa share-icon fa-google-plus fa-2x"></i></a>' +
+            '<a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=' +
+            postHref + "&title=" + postTitle +
+            '"><i class="fa fa-facebook-square fa-2x"></i></a>',
         html: true
     });
 
